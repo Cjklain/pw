@@ -2,49 +2,35 @@
 
 int main()
 {
-    int x, y, z;
+    int x, y, z, max, mid;
 
     std::cout << "Podaj liczby: " << std::endl;
     std::cin >> x >> y >> z;
 
-    if (z < x && z < y)
+    if (x >= y)
     {
-        std::cout << "Najwieksze liczby to: " << x << "i " << y << std::endl;
-        if (x > y)
-        {
-            std::cout << "Wynik dzielenia to: " << x / (1.0 * y) << "i " << y << std::endl;
-        }
-        else
-        {
-            std::cout << "Wynik dzielenia to: " << y / (1.0 * x) << "i " << y << std::endl;
-        }
+        max = x;
+        mid = y;
+    }
+    else if (y >= x)
+    {
+        max = y;
+        mid = x;
     }
 
-    if (y < x && y < z)
+    if (z > max)
     {
-        std::cout << "Najwieksze liczby to: " << x << "i " << z << std::endl;
-        if (x > z)
-        {
-            std::cout << "Wynik dzielenia to: " << x / (1.0 * z) << std::endl;
-        }
-        else
-        {
-            std::cout << "Wynik dzielenia to: " << z / (1.0 * x) << std::endl;
-        }
+        mid = max;
+        max = z;
     }
 
-    if (x < y && x < z)
+    if (z > mid)
     {
-        std::cout << "Najwieksze liczby to: " << y << "i " << z << std::endl;
-        if (y > y)
-        {
-            std::cout << "Wynik dzielenia to: " << y / (1.0 * z) << std::endl;
-        }
-        else
-        {
-            std::cout << "Wynik dzielenia to: " << z / (1.0 * y) << std::endl;
-        }
+        mid = z;
     }
+
+    std::cout << "Najwieksze liczby to: " << max << " " << mid << std::endl;
+    std::cout << "Wynik dzielenia to: " << max / (1.0 * mid) << std::endl;
 
     return 0;
 };
