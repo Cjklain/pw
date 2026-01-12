@@ -42,7 +42,7 @@ int main()
                 licznik++;
             }
         }
-
+        pierwsza_iteracja = false;
         poprzednia = aktualna;
     } while (!(aktualna % 2 == 0 && aktualna % D == 0));
 
