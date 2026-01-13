@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 const int D = 2;
 const int G = 6;
@@ -10,7 +9,7 @@ int main()
 
     int k, pierwszaDuza{0}, wiekszaOd{0};
     std::string napis;
-    long double tablica[N] = {}, suma{0}, srednia{0};
+    long double tablica[N], suma{0}, srednia{0};
 
     do
     {
