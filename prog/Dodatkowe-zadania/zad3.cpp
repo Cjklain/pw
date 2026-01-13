@@ -23,7 +23,7 @@ int main()
     {
         std::cin >> napis;
 
-        if (std::isupper(napis.front()))
+        if (std::isupper(static_cast<unsigned char>(napis.front())))
         {
             pierwszaDuza++;
         }

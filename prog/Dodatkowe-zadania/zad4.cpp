@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
+#include <ctime>
 
 const int w{4}, k{5}, Sz{6};
 
 int main()
 {
-    double dziennik[w][k], suma[k] = {}, srednia[k], temp;
+    long double dziennik[w][k], suma[k] = {}, srednia[k], temp;
     int maxIndex;
     srand(time(0));
 
