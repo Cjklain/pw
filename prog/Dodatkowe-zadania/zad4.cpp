@@ -24,7 +24,7 @@ int main()
         for (int j = 0; j < k; j++)
         {
             suma[j] += dziennik[i][j];
-            std::cout << std::fixed << std::setprecision(1) << std::setw(Sz) << dziennik[i][j] << "\t";
+            std::cout << std::fixed << std::setprecision(1) << std::setw(Sz) << dziennik[i][j];
         }
         std::cout << std::endl;
     }
@@ -42,22 +42,21 @@ int main()
             maxIndex = i;
         }
 
-        std::cout << std::fixed << std::setprecision(2) << std::setw(Sz + 1) << srednia[i] << "\t";
+        std::cout << std::fixed << std::setprecision(2) << std::setw(Sz) << srednia[i];
     }
 
     std::cout << std::endl
               << std::endl;
 
-    for (int i = 0; i < w; i++)
+    if (maxIndex != k - 1)
     {
-        if (maxIndex == k - 1)
+        for (int i = 0; i < w; i++)
         {
-            break;
-        }
 
-        temp = dziennik[i][maxIndex];
-        dziennik[i][maxIndex] = dziennik[i][k - 1];
-        dziennik[i][k - 1] = temp;
+            temp = dziennik[i][maxIndex];
+            dziennik[i][maxIndex] = dziennik[i][k - 1];
+            dziennik[i][k - 1] = temp;
+        }
     }
 
     std::cout << std::endl;
@@ -65,7 +64,7 @@ int main()
     {
         for (int j = 0; j < k; j++)
         {
-            std::cout << std::fixed << std::setprecision(1) << std::setw(Sz) << dziennik[i][j] << "\t";
+            std::cout << std::fixed << std::setprecision(1) << std::setw(Sz) << dziennik[i][j];
         }
         std::cout << std::endl;
     }
