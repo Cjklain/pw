@@ -3,7 +3,8 @@
 #include <cstdlib>
 #include <ctime>
 
-const int w{10}, k{3}, G{100}, Sz{6};
+const int w{10}, k{3}, Sz{6};
+const double G{100.0};
 
 int main()
 {
@@ -22,9 +23,9 @@ int main()
     {
         for (int j = 0; j < k; j++)
         {
-            A[i][j].inicjalImie = 65 + (26.0) * rand() / (double(RAND_MAX) + 1);
-            A[i][j].inicjalNazwisko = 65 + (26.0) * rand() / (double(RAND_MAX) + 1);
-            A[i][j].punkty = (double(G)) * rand() / double(RAND_MAX);
+            A[i][j].inicjalImie = (rand() % 26) + 65;
+            A[i][j].inicjalNazwisko = (rand() % 26) + 65;
+            A[i][j].punkty = G * rand() / double(RAND_MAX);
             std::cout << A[i][j].inicjalImie << A[i][j].inicjalNazwisko << std::setw(Sz) << A[i][j].punkty << " ";
         }
         std::cout << std::endl;
