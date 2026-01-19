@@ -19,7 +19,6 @@ int main()
 
     plik.open(nazwaPliku, std::ios::in);
 
-    // plik.open("./test.txt", std::ios::in);
     if (!plik.is_open())
     {
         std::cout << "Bład!" << std::endl;
@@ -31,7 +30,7 @@ int main()
         for (int j = 0; j < n; j++)
         {
 
-            if (!plik.eof())
+            if (plik >> A[i][j])
             {
                 plik >> A[i][j];
             }
