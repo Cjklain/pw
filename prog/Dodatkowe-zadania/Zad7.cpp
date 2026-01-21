@@ -4,7 +4,7 @@
 
 const int w{10}, k{6};
 
-void wylosujIWypelnij(int a, int b, char arr[w][k])
+void wylosujIWypelnij(char a, char b, char arr[w][k])
 {
     for (int i = 0; i < w; i++)
     {
