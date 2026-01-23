@@ -15,7 +15,6 @@ int main()
         double punkty;
     };
 
-    srand(time(0));
     std::cout << std::fixed << std::setprecision(2);
     Student A[w][k];
 
